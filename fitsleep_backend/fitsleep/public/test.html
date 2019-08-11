@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+
+<html>
+<body>
+    /api/login/   right user
+    <form name="form1" method="post" action="/api/login/">
+        <input type="hidden" name="userName" value="atlas" />
+        <input type="hidden" name="pwd" value="atlas123" />
+        <input type="submit" value="login" />
+    </form>
+
+    <p></p>
+
+    /api/login/   wrong user
+    <form name="form2" method="post" action="/api/login/">
+        <input type="hidden" name="userName" value="atlas1" />
+        <input type="hidden" name="pwd" value="11111" />
+        <input type="submit" value="login" />
+    </form>
+
+    <p></p>
+    ===================================================================================
+
+    <p></p>
+
+    /api/addBed right data
+
+    <form name="form3" method="post" action="/api/addBed/" accept-charset="utf-8">
+        <input type="hidden" name="bedNum" value="103" />
+        <input type="hidden" name="personName" value="張先生" />
+        <input type="hidden" name="fitSleepMac" value="884aea4c6ab6" />
+        <input type="submit" value="Add" />
+    </form>
+
+    ===================================================================================
+    <p></p>
+
+    /api/delBed 
+
+    <form name="form4" method="post" action="/api/delBed/" accept-charset="utf-8">
+        <input type="hidden" name="id" value="5ba0aa9fa4db1d12740504a8" />
+        <input type="submit" value="Del" />
+    </form>
+
+    ===================================================================================
+
+    <p></p>
+
+    /api/updateBed
+
+    <form name="form4" method="post" action="/api/updateBed/" accept-charset="utf-8">
+        <input type="hidden" name="id" value="5ba0aa8da4db1d12740504a7" />
+        <input type="hidden" name="bedNum" value="101" />
+        <input type="hidden" name="personName" value="王大明2" />
+        <input type="hidden" name="fitSleepMac" value="11:22:33:44:55:67" />
+        <input type="submit" value="Update" />
+    </form>
+
+    ===================================================================================
+
+    <p></p>
+
+    /api/getBedList
+
+    <form name="form4" method="get" action="/api/getBedList/" accept-charset="utf-8">
+        <input type="submit" value="List" />
+    </form>
+
+    ===================================================================================
+
+    <p></p>
+
+    /api/getBedStatusList
+
+    <form name="form6" method="get" action="/api/getBedStatusList/" accept-charset="utf-8">
+        <input type="submit" value="List" />
+    </form>
+
+    ===================================================================================
+
+    <p></p>
+
+    /api/saveSchedule
+
+    <form name="form7" method="post" action="/api/saveSchedule/" accept-charset="utf-8">
+        <input type="hidden" name="bedId" value="5ba0aa8da4db1d12740504a8" />
+        <input type="hidden" name="startDate" value="20181030" />
+        <input type="hidden" name="data" value="qqwwssxxcc" />
+        <input type="submit" value="Go" />
+    </form>
+    ===================================================================================
+
+    <p></p>
+
+    /api/getSchedule
+
+    <form name="form7" method="post" action="/api/getSchedule/" accept-charset="utf-8">
+        <input type="hidden" name="bedId" value="5ba0aa8da4db1d12740504a8" />
+        <input type="hidden" name="startDate" value="20181030" />
+        <input type="submit" value="Go" />
+    </form>
+</body>
+</html>
